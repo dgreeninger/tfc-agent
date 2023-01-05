@@ -30,6 +30,7 @@ variable "notification_token" {
 
 variable "prefix" {
   description = "Name prefix to add to the resources"
+  default     = "tfe-greeninger-org"
 }
 
 variable "region" {
@@ -70,8 +71,8 @@ variable "ttl" {
 // OPTIONAL Tags
 locals {
   common_tags = {
-    owner              = "your-name-here"
-    se-region          = "your-region-here"
+    owner              = "dgreeninger"
+    csa-region          = "west"
     purpose            = "Default state is dormant with no active resources. Runs a Terraform Cloud Agent when a run is queued."
     ttl                = var.ttl # hours
     terraform          = "true"  # true/false
